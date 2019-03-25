@@ -435,7 +435,7 @@ $('button[type="submit"]').on('click', function (e) {
             okToSubmit += 1
         }
     }
-
+    //submit oly if this values are correct 
     if (okToSubmit !== 6 && $('#payment').val() === 'credit card') {
         preventSubmit('button');
     }

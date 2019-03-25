@@ -361,7 +361,7 @@ $('button[type="submit"]').on('click', function (e) {
     const preventSubmit = (type) => {
         $('button[type="submit"]').attr('type', type);
     }
-    preventSubmit('button');
+    preventSubmit('submit')
 
     // if name field is empty alert the user 
     const nameVal = $('#name').val();
@@ -436,11 +436,11 @@ $('button[type="submit"]').on('click', function (e) {
         }
     }
 
-    if (okToSubmit === 6 && $('#payment').val() === 'credit card') {
-        preventSubmit('submit');
+    if (okToSubmit !== 6 && $('#payment').val() === 'credit card') {
+        preventSubmit('button');
     }
-    if (okToSubmit === 3 && $('#payment').val() !== 'credit card') {
-        preventSubmit('submit');
+    if (okToSubmit !== 3 && $('#payment').val() !== 'credit card') {
+        preventSubmit('button');
     }
 });
 
